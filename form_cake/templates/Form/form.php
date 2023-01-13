@@ -6,18 +6,23 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+            <?php
+              $my_template = [
+                'inputContainer'=>'<div class="form-outline">{{content}}</div>',
+                 'input'=>'<input type="{{type}}" class="form-control form-control-lg" name = "{{name}}" id = "{{id}}"{{attrs}}/>'
+                
+                
+              ];
+              $this->Form->setTemplates($my_template);
+            ?>
             <?php echo $this->Form->create(null); ?>
 
               <div class="row">
                 <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-                    <?php echo $this->Form->input('first_name',['type'=>'text','class'=>'form-control form-control-lg','label'=>false,'id'=>'first-name']); ?>
-                    <label class="form-label" for="first-name">First Name</label>
-                  </div>
-
+                    <?php echo $this->Form->control('name', [])?>
                 </div>
-                <div class="col-md-6 mb-4">
+                </div>
+                <!-- <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
                     <input type="text" id="lastName" class="form-control form-control-lg" />
@@ -25,7 +30,7 @@
                   </div>
 
                 </div>
-              </div>
+            
 
               <div class="row">
                 <div class="col-md-6 mb-4 d-flex align-items-center">
@@ -96,7 +101,7 @@
 
               <div class="mt-4 pt-2">
                 <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
-              </div>
+              </div> -->
 
             <?php echo $this->Form->end();?>
           </div>
