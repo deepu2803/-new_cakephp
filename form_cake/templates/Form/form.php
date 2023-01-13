@@ -12,8 +12,8 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <?php echo $this->Form->control('first_name',['class'=>'form-control','id'=>'firstName','label'=>false]); ?>
-                    <label class="form-label" for="firstName">First Name</label>
+                    <?php echo $this->Form->input('first_name',['type'=>'text','class'=>'form-control form-control-lg','label'=>false,'id'=>'first-name']); ?>
+                    <label class="form-label" for="first-name">First Name</label>
                   </div>
 
                 </div>
